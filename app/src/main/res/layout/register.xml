@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="20dp"
-    android:background="@color/yellow_transparent">
+    android:background="@color/yellow_bright_transparent">
 
     <!-- Logo di tengah -->
     <ImageView
@@ -15,7 +15,9 @@
         android:src="@drawable/logo_wijah"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true" />
+        android:background="@drawable/circular_logo"
+        android:clipToOutline="true" />
+
 
     <!-- Label Email -->
     <TextView

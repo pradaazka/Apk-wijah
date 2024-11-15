@@ -2,30 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow_transparent"
+    android:background="@color/yellow_bright_transparent"
     android:padding="16dp">
 
-    <!-- Tombol panah di atas kiri -->
-    <ImageButton
-        android:id="@+id/btn_back_arrow"
+    <!-- Tombol Kembali Berbentuk Panah di Kiri -->
+    <TextView
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back_arrow"
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_alignParentStart="true"
-        android:layout_margin="8dp"
-        android:contentDescription="Back Arrow" />
+        android:text="←"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:layout_marginTop="-4dp"
+        android:contentDescription="Back Button" />
 
-    <!-- Teks di tengah -->
     <TextView
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="wija"
+        android:text="wijah"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
+
+    <!-- Kolom Pencarian -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cari tempat..."
+        android:background="@drawable/search_background"
+        android:padding="10dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:inputType="text" />
 
     <!-- Container untuk foto dan teks di bawahnya -->
     <LinearLayout
@@ -33,7 +49,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_below="@id/title_text"
+        android:layout_below="@id/search_bar"
+        android:background="@drawable/circular_logo"
         android:layout_marginTop="32dp">
 
         <!-- Foto pertama di kiri -->
@@ -48,10 +65,13 @@
                 android:id="@+id/photo_1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@android:color/white"
                 android:src="@drawable/logo_bali"
                 android:contentDescription="Photo 1"
-                android:clickable="true" />
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_shape"
+                android:clipToOutline="true" />
 
             <TextView
                 android:id="@+id/name_1"
@@ -83,9 +103,13 @@
                 android:id="@+id/photo_2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@android:color/white"
-                android:contentDescription="Photo 2"
-                android:clickable="true" />
+                android:src="@drawable/logo_bali"
+                android:contentDescription="Photo 1"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_shape"
+                android:clipToOutline="true" />
 
             <TextView
                 android:id="@+id/name_2"
@@ -105,5 +129,4 @@
                 android:gravity="center" />
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

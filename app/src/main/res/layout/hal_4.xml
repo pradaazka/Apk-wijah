@@ -2,18 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow_transparent">
+    android:background="@color/yellow_bright_transparent">
 
-    <!-- Tombol panah kembali di kiri atas -->
-    <ImageButton
+    <TextView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="←"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_back_arrow"
-        android:contentDescription="Tombol Kembali" />
+        android:padding="8dp"
+        android:layout_marginTop="-4dp"
+        android:contentDescription="Back Button" />
 
     <!-- Gambar kotak yang hanya di bagian atas, full width dan berwarna putih -->
     <ImageView
@@ -22,15 +25,28 @@
         android:layout_height="200dp"
         android:layout_below="@id/back_button"
         android:scaleType="centerCrop"
-        android:background="@android:color/white"
-        android:src="@drawable/pemandangan" />
+        android:src="@drawable/logo_bali" />
 
-    <!-- Deskripsi di bawah gambar -->
+    <!-- Tombol Lihat Lokasi di kiri bawah logo -->
+    <Button
+        android:id="@+id/btn_lihat_lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/top_image"
+        android:layout_below="@id/top_image"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Lihat Lokasi"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_orange_light" />
+
+    <!-- Deskripsi di bawah tombol -->
     <TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/top_image"
+        android:layout_below="@id/btn_lihat_lokasi"
         android:layout_margin="16dp"
         android:text="Deskripsi konten di sini."
         android:textSize="16sp"

@@ -13,7 +13,11 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/logo_bali"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circular_logo"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true" />
+
 
     <!-- Teks Judul -->
     <TextView
@@ -37,7 +41,7 @@
         android:layout_marginBottom="24dp">
 
         <RadioButton
-            android:id="@+id/radio_mataram_islam"
+            android:id="@+id/radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mataram Islam"
@@ -46,7 +50,7 @@
             android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/radio_mataram_hindu"
+            android:id="@+id/radio_mataram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mataram Hindu"

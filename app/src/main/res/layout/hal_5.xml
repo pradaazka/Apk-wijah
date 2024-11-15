@@ -2,18 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow_transparent">
+    android:background="@color/yellow_bright_transparent">
 
-    <!-- Tombol kembali di kiri atas berbentuk panah -->
-    <ImageButton
+    <TextView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="←"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_back_arrow"
-        android:contentDescription="Tombol Kembali" />
+        android:padding="8dp"
+        android:layout_marginTop="-4dp"
+        android:contentDescription="Back Button" />
 
     <!-- Gambar Google Maps di tengah halaman yang bisa ditekan dengan warna putih -->
     <ImageView
@@ -25,6 +28,4 @@
         android:background="@drawable/circle_background"
         android:scaleType="centerCrop"
         android:contentDescription="Google Maps Image" />
-
-
 </RelativeLayout>
