@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                         )
                         "profile" -> ShowProfileLayout(
                             modifier = Modifier.padding(innerPadding),
-                            onBackClick = { currentScreen = "register" } // Navigate back to register
+                            onBackClick = { currentScreen = "hal_2" }  // Navigasi kembali ke hal_2
                         )
                         "login" -> ShowLoginLayout(
                             modifier = Modifier.padding(innerPadding),
@@ -48,7 +48,8 @@ class MainActivity : ComponentActivity() {
                         "hal_2" -> ShowHal2Layout(
                             modifier = Modifier.padding(innerPadding),
                             onLocationClick = { currentScreen = "hal_3" },
-                            onBackClick = { currentScreen = "hal_1" }
+                            onBackClick = { currentScreen = "hal_1" },
+                            onProfileClick = { currentScreen = "profile" }  // Navigasi ke profil
                         )
                         "hal_3" -> ShowHal3Layout(
                             modifier = Modifier.padding(innerPadding),
@@ -155,11 +156,12 @@ fun ShowRegisterLayout(modifier: Modifier = Modifier, onRegisterClick: () -> Uni
 fun ShowProfileLayout(modifier: Modifier = Modifier, onBackClick: () -> Unit) {
     AndroidView(
         factory = { context ->
-            val view = LayoutInflater.from(context).inflate(R.layout.profil, null) // Pastikan sesuai nama file layout
-
+            val view = LayoutInflater.from(context).inflate(R.layout.profil, null)
             val backButton: TextView = view.findViewById(R.id.back_button)
+
+            // Menangani klik tombol Kembali
             backButton.setOnClickListener {
-                onBackClick() // Kembali ke layar sebelumnya
+                onBackClick() // Arahkan kembali ke hal_2
             }
 
             view
@@ -167,6 +169,7 @@ fun ShowProfileLayout(modifier: Modifier = Modifier, onBackClick: () -> Unit) {
         modifier = modifier.fillMaxSize()
     )
 }
+
 
 @Composable
 fun ShowLoginLayout(modifier: Modifier = Modifier, onLoginClick: () -> Unit) {
@@ -255,12 +258,13 @@ fun ShowHal1Layout(modifier: Modifier = Modifier, onStartClick: () -> Unit) {
 }
 
 @Composable
-fun ShowHal2Layout(modifier: Modifier = Modifier, onLocationClick: () -> Unit, onBackClick: () -> Unit) {
+fun ShowHal2Layout(modifier: Modifier = Modifier, onLocationClick: () -> Unit, onBackClick: () -> Unit, onProfileClick: () -> Unit) {
     AndroidView(
         factory = { context ->
             val view = LayoutInflater.from(context).inflate(R.layout.hal_2, null)
             val locationButton: ImageButton = view.findViewById(R.id.btn_location_1)
             val backButton: TextView = view.findViewById(R.id.back_button)
+            val profileButton: ImageButton = view.findViewById(R.id.btn_profile)  // Tombol profile
 
             locationButton.setOnClickListener {
                 onLocationClick() // Navigate to hal_3
@@ -270,11 +274,16 @@ fun ShowHal2Layout(modifier: Modifier = Modifier, onLocationClick: () -> Unit, o
                 onBackClick() // Handle back click to navigate to hal_1
             }
 
+            profileButton.setOnClickListener {
+                onProfileClick() // Navigate to profile screen
+            }
+
             view
         },
         modifier = modifier.fillMaxSize()
     )
 }
+
 
 
 @Composable
