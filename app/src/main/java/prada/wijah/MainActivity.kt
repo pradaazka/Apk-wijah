@@ -61,10 +61,6 @@ class MainActivity : ComponentActivity() {
                             onLocationClick  = { currentScreen = "hal_5" },
                             onBackClick = { currentScreen = "hal_3" }
                         )
-                        "hal_5" -> ShowHal5Layout(
-                            modifier = Modifier.padding(innerPadding),
-                            onBackClick = { currentScreen = "hal_4" }
-                        )
 
                     }
                 }
@@ -313,19 +309,3 @@ fun ShowHal4Layout(
 }
 
 
-@Composable
-fun ShowHal5Layout(modifier: Modifier = Modifier, onBackClick: () -> Unit) {
-    AndroidView(
-        factory = { context ->
-            val view = LayoutInflater.from(context).inflate(R.layout.hal_5, null)
-            val backButton: TextView = view.findViewById(R.id.back_button)
-
-            backButton.setOnClickListener {
-                onBackClick() // Handle back click to navigate to hal_4
-            }
-
-            view
-        },
-        modifier = modifier.fillMaxSize()
-    )
-}
