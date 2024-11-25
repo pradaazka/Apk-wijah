@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.RadioButton
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
                         )
                         "profile" -> ShowProfileLayout(
                             modifier = Modifier.padding(innerPadding),
-                            onBackClick = { currentScreen = "hal_2" }  // Navigasi kembali ke hal_2
+                            onBackClick = { currentScreen = "hal_2" }
                         )
                         "login" -> ShowLoginLayout(
                             modifier = Modifier.padding(innerPadding),
@@ -43,23 +44,41 @@ class MainActivity : ComponentActivity() {
                         )
                         "hal_1" -> ShowHal1Layout(
                             modifier = Modifier.padding(innerPadding),
-                            onStartClick = { currentScreen = "hal_2" }
+                            onStartClick = { destination ->
+                                when (destination) {
+                                    "Jawa Timur" -> currentScreen = "hal_2"
+                                    "Jawa Tengah" -> currentScreen = "hal_jabar"
+                                    "Jawa Barat" -> currentScreen = "hal_jateng"
+                                }
+                            }
                         )
                         "hal_2" -> ShowHal2Layout(
                             modifier = Modifier.padding(innerPadding),
                             onLocationClick = { currentScreen = "hal_3" },
                             onBackClick = { currentScreen = "hal_1" },
-                            onProfileClick = { currentScreen = "profile" }  // Navigasi ke profil
+                            onProfileClick = { currentScreen = "profile" }
                         )
                         "hal_3" -> ShowHal3Layout(
                             modifier = Modifier.padding(innerPadding),
                             onImageClick = { currentScreen = "hal_4" },
-                            onBackClick = { currentScreen = "hal_2" } // Navigate back to hal_2
+                            onBackClick = { currentScreen = "hal_2" }
                         )
                         "hal_4" -> ShowHal4Layout(
                             modifier = Modifier.padding(innerPadding),
-                            onLocationClick  = { currentScreen = "hal_5" },
+                            onLocationClick = { currentScreen = "hal_5" },
                             onBackClick = { currentScreen = "hal_3" }
+                        )
+                        "hal_jabar" -> ShowHaljatengLayout(
+                            modifier = Modifier.padding(innerPadding),
+                            onLocationClick = { currentScreen = "hal_3" },
+                            onBackClick = { currentScreen = "hal_1" },
+                            onProfileClick = { currentScreen = "profile" }
+                        )
+                        "hal_jateng" -> ShowHaljabarLayout(
+                            modifier = Modifier.padding(innerPadding),
+                            onLocationClick = { currentScreen = "hal_3" },
+                            onBackClick = { currentScreen = "hal_1" },
+                            onProfileClick = { currentScreen = "profile" }
                         )
 
                     }
@@ -215,38 +234,31 @@ fun ShowLoginLayout(modifier: Modifier = Modifier, onLoginClick: () -> Unit) {
 }
 
 @Composable
-fun ShowHal1Layout(modifier: Modifier = Modifier, onStartClick: () -> Unit) {
+fun ShowHal1Layout(modifier: Modifier = Modifier, onStartClick: (String) -> Unit) {
     AndroidView(
         factory = { context ->
-            // Inflate layout
             val view = LayoutInflater.from(context).inflate(R.layout.hal_1, null)
 
-            // Pastikan kita mendapatkan referensi yang tepat
-            val radioGroup = view.findViewById<RadioGroup>(R.id.radio_group)  // Pastikan ID radio_group ada di XML
+            val radioGroup = view.findViewById<RadioGroup>(R.id.radio_group)
             val startButton: Button = view.findViewById(R.id.btn_start)
 
-            // Fungsi untuk mengupdate status tombol Start
             fun updateStartButtonState() {
-                // Menonaktifkan tombol jika tidak ada pilihan yang dipilih
                 startButton.isEnabled = radioGroup.checkedRadioButtonId != -1
             }
 
-            // Menambahkan listener untuk setiap perubahan di RadioGroup
             radioGroup.setOnCheckedChangeListener { _, _ ->
-                updateStartButtonState() // Update status tombol setiap kali pilihan berubah
+                updateStartButtonState()
             }
 
-            // Menambahkan listener untuk tombol Start
             startButton.setOnClickListener {
                 if (radioGroup.checkedRadioButtonId != -1) {
-                    onStartClick() // Panggil onStartClick() jika ada pilihan yang dipilih
+                    val selectedRadioButton = view.findViewById<RadioButton>(radioGroup.checkedRadioButtonId)
+                    val destination = selectedRadioButton.text.toString() // Ambil teks dari RadioButton yang dipilih
+                    onStartClick(destination) // Kirim teks ke fungsi onStartClick
                 }
             }
 
-            // Inisialisasi status tombol Start berdasarkan pilihan yang ada
             updateStartButtonState()
-
-            // Kembalikan tampilan
             view
         },
         modifier = modifier.fillMaxSize()
@@ -307,5 +319,56 @@ fun ShowHal4Layout(
         modifier = modifier.fillMaxSize()
     )
 }
+@Composable
+fun ShowHaljatengLayout(modifier: Modifier = Modifier, onLocationClick: () -> Unit, onBackClick: () -> Unit, onProfileClick: () -> Unit) {
+    AndroidView(
+        factory = { context ->
+            val view = LayoutInflater.from(context).inflate(R.layout.hal_jateng, null)
+            val locationButton: ImageButton = view.findViewById(R.id.btn_location_1)
+            val backButton: TextView = view.findViewById(R.id.back_button)
+            val profileButton: ImageButton = view.findViewById(R.id.btn_profile)  // Tombol profile
 
+            locationButton.setOnClickListener {
+                onLocationClick() // Navigate to hal_3
+            }
+
+            backButton.setOnClickListener {
+                onBackClick() // Handle back click to navigate to hal_1
+            }
+
+            profileButton.setOnClickListener {
+                onProfileClick() // Navigate to profile screen
+            }
+
+            view
+        },
+        modifier = modifier.fillMaxSize()
+    )
+}
+@Composable
+fun ShowHaljabarLayout(modifier: Modifier = Modifier, onLocationClick: () -> Unit, onBackClick: () -> Unit, onProfileClick: () -> Unit) {
+    AndroidView(
+        factory = { context ->
+            val view = LayoutInflater.from(context).inflate(R.layout.hal_jabar, null)
+            val locationButton: ImageButton = view.findViewById(R.id.btn_location_1)
+            val backButton: TextView = view.findViewById(R.id.back_button)
+            val profileButton: ImageButton = view.findViewById(R.id.btn_profile)  // Tombol profile
+
+            locationButton.setOnClickListener {
+                onLocationClick() // Navigate to hal_3
+            }
+
+            backButton.setOnClickListener {
+                onBackClick() // Handle back click to navigate to hal_1
+            }
+
+            profileButton.setOnClickListener {
+                onProfileClick() // Navigate to profile screen
+            }
+
+            view
+        },
+        modifier = modifier.fillMaxSize()
+    )
+}
 
