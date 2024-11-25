@@ -12,7 +12,7 @@
         android:id="@+id/logo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/logo_bali"
+        android:src="@drawable/logo_wijah"
         android:layout_marginBottom="16dp"
         android:background="@drawable/circular_logo"
         android:scaleType="centerCrop"
@@ -41,28 +41,28 @@
         android:layout_marginBottom="24dp">
 
         <RadioButton
-            android:id="@+id/radio_button"
+            android:id="@+id/radio_jatim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mataram Islam"
+            android:text="Jawa Timur"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/radio_mataram"
+            android:id="@+id/radio_jateng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mataram Hindu"
+            android:text="Jawa Tengah"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/radio_masa_kolonial"
+            android:id="@+id/radio_jabar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mataram budha"
+            android:text="Jawa Barat"
             android:textSize="16sp"
             android:layout_marginTop="8dp" />
     </RadioGroup>
