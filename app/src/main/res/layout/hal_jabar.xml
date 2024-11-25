@@ -117,7 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jawa Timur"
+            android:text="Unggulan"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -132,12 +132,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/candisingo_img"
+                android:id="@+id/gedsat_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/candi_kidal" />
+                android:background="@drawable/gedung_sate" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,18 +146,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/candisingo"
+                    android:id="@+id/gedsat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Candi Singosari"
+                    android:text="Gedung Sate"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/candisingo_add"
+                    android:id="@+id/gedsat_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Kertanegara, Candirenggo, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153"
+                    android:text="Jl. Diponegoro No.22, Citarum, Bandung Wetan, Kota Bandung"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -171,12 +171,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/candisari_img"
+                android:id="@+id/muskon_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/candi_sari" />
+                android:background="@drawable/museum_konferensi" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,18 +185,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/candisari"
+                    android:id="@+id/muskon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Candi Sari"
+                    android:text="Museum Konferensi Asia Afrika"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/candisari_add"
+                    android:id="@+id/muskon_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Candisari Jl. Raya Solo - Yogyakarta No.107, Bendan, Tirtomartani, Kec. Kalasan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55571"
+                    android:text="Jl. Asia Afrika No.65, Braga, Sumur Bandung, Kota"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -210,12 +210,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/candipena_img"
+                android:id="@+id/monper_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/candi_panataran" />
+                android:background="@drawable/monumen_jawa_barat" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -224,10 +224,10 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/camdipena"
+                    android:id="@+id/monper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Candi Penataran"
+                    android:text="Monumen Perjuangan Rakyat Jawa Barat"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -235,7 +235,7 @@
                     android:id="@+id/candipena_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Penataran, Kec. Nglegok, Kabupaten Blitar, Jawa Timur 66181"
+                    android:text="Jl. Dipati Ukur, Lebakgede, Coblong, Kota Bandung"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -249,12 +249,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/candikidal_img"
+                android:id="@+id/saung_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/candi_kidal" />
+                android:background="@drawable/saung_angklung" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -263,18 +263,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/candikidal"
+                    android:id="@+id/saung"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Candi Kidal"
+                    android:text="Saung Angklung Udjo"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/candikidal_add"
+                    android:id="@+id/saung_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="XPF5+MJG, Jalan Raya, Panggung, Kidal, Tumpang, Malang Regency, East Java 65156"
+                    android:text="Jl. Padasuka No.118, Cibeunying Kidul, Kota Bandung"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -288,12 +288,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/mus10_img"
+                android:id="@+id/musge_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/museum_sepuluh_n" />
+                android:background="@drawable/museum_geologi" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -302,19 +302,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/mus10"
+                    android:id="@+id/musge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Museum Sepuluh Nopember"
+                    android:text="Museum Geologi Bandung"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/mus10_add"
+                    android:id="@+id/musge_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Phlawan, Alun-alun Contong, Kec. Bubutan, Surabaya, Jawa Timur 60174
-"
+                    android:text="Jl. Diponegoro No.57, Cihaur Geulis, Cibeunying Kaler, Kota Bandung"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -328,12 +327,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/bentengvan_img"
+                android:id="@+id/kasepuhan_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/benteng_van_den_boch" />
+                android:background="@drawable/keraton_kasepuhan" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -342,19 +341,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/bentengvan"
+                    android:id="@+id/kasepuhan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Benteng Van Den Boch"
+                    android:text="Keraton Kasepuhan"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/bentengvan_add"
+                    android:id="@+id/kasepuhan_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Untung Suropati No.II, Pelem II, Pelem, Kec. Ngawi, Kabupaten Ngawi, Jawa Timur 63211
-"
+                    android:text="Jl. Kasepuhan No.43, Kesepuhan, Lemahwungkuk, Kota Cirebon"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -368,12 +366,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/makambungk_img"
+                android:id="@+id/kanoman_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/makam_bung_karno" />
+                android:background="@drawable/keraton_kanoman" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -382,18 +380,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/makambungk"
+                    android:id="@+id/kanoman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Makam Bung Karno"
+                    android:text="Keraton Kanoman"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/makambungk_add"
+                    android:id="@+id/kanoman_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Ir. Soekarno No.152, Bendogerit, Kec. Sananwetan, Kota Blitar, Jawa Timur 66133"
+                    android:text="Jl. Winaon, Lemahwungkuk, Kota Cirebon"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -407,12 +405,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/musmaj_img"
+                android:id="@+id/goasunya_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/museum_majapahhit" />
+                android:background="@drawable/goa_sunyaragi" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -421,18 +419,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/musmaj"
+                    android:id="@+id/goasunya"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Museum Majapahit"
+                    android:text="Goa Sunyaragi"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/musmaj_add"
+                    android:id="@+id/goasunya_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C9RJ+26H, Jl. Pendopo Agung, Ngelinguk, Trowulan, Kec. Trowulan, Kabupaten Mojokerto, Jawa Timur 61362"
+                    android:text="Sunyaragi, Kesambi, Kota Cirebon"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
@@ -446,12 +444,12 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:id="@+id/candisuro_img"
+                android:id="@+id/masagsang_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:background="@drawable/candi_surowono" />
+                android:background="@drawable/museum_agung_cipta_rasa" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -460,19 +458,18 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/candisuro"
+                    android:id="@+id/masagsang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Candi Surowono"
+                    android:text="Masjid Agung Sang Cipta Rasa"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/candisuro_add"
+                    android:id="@+id/masagsang_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Surowono, Canggu, Kec. Badas, Kabupaten Kediri, Jawa Timur 64217
-"
+                    android:text="Jl. Jagasatru, Kesepuhan, Lemahwungkuk, Kota Cirebon"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
